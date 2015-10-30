@@ -1,0 +1,34 @@
+.s__footer
+    .s__footer_top
+        .s__footer_top-line
+    .s__footer_p
+        p Contact Us
+    .s__footer_main-text
+        h6 Заказать лазерную безопасность
+    .s__footer_txt
+        form#contact-form.form-horizontal.s__footer_txt-form(action="process.php", role="form", method="post")
+            #name-field.form-group
+                .col-lg-10
+                    input#form-name.form-control(type="text", name="form-name", placeholder="Имя", required="")
+            #email-field.form-group
+                .col-lg-10
+                    input#form-email.form-control(type="email", name="form-email", placeholder="Email", required="")
+            #message-field.form-group
+                .col-lg-10
+                    textarea#form-message.form-control(rows="6", name="form-message", placeholder="Сообщение", required="")
+            .form-group
+                .col-lg-10.contact-sumbit
+                    button.submit(type="submit") Отправить
+        .s__footer_txt-adr#footer
+            address
+                ul
+                    li Т: +7 499 64-74-122
+                    li А: Москва 3-я Мытищинская ул. 16 с14
+                    li E: firmamoskonsalt@gmail.com
+        .s__footer_txt-social
+            li
+                a(href="https://twitter.com/home?status=%23fmk" class="twitter-follow-button" title="Официальный твиттер фирмы МосКонсалт" target="_blank")
+                    span.twitter_icon
+            li
+                a(href="#" title="Официальная страница фирмы МосКонсалт в google plus" target="_blank")
+                    span.gplus_icon

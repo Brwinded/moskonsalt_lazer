@@ -1,0 +1,81 @@
+Tab.s__main
+    height: 400px
+    margin-top: 50px
+    +outer-container()
+    +media(max-width 320px, 10)
+        height: 710px
+
+    &_left
+        +span-columns(5)
+        +shift(1)
+        height: 400px
+        background:
+            image: url('http://lorempixel.com/500/500/')
+            repeat: no-repeat
+            position: center center
+            size: cover
+            color: #656565
+        background-blend-mode: luminosity
+        margin-right: 0
+        +media(max-width 320px, 10)
+            +span-columns(10)
+            +shift(0)
+            height: 200px
+
+        &_p
+            +span-columns(3)
+            height: 50px
+            position: absolute
+            display: block
+            padding-left: 20px
+            background: #d81f1f
+            +media(max-width 768px, 12)
+                +span-columns(3)
+            +media(max-width 320px, 10)
+                +span-columns(5)
+
+    &_right
+        +span-columns(9.25)
+        height: 400px
+        background: #fff
+        +media(max-width 320px, 10)
+            +span-columns(10)
+            height: 510px
+
+        &-line
+            width: 0px
+            height: 2px
+            background: #d81f1f
+            display: block
+            transition: width 1.5s ease-in-out
+            +media(max-width 768px, 12)
+                display: none
+
+        &:hover .s__main_right-line
+            +span-columns(11 of 11)
+            +media(max-width 768px, 12)
+                display: none
+
+
+        &_txt
+            width: 90%
+            margin: 0 auto
+            color: #000
+
+            &-btn
+                display: block
+                width: 150px
+                border: 2px solid #b9b9b9
+                border-radius: 5px
+                text-align: center
+                padding: 10px
+                text-decoration: none
+                color: #d81f1f
+                font-weight: 500
+                margin: 0 auto
+                transition: all .4s
+
+                &:hover
+                    border: 2px solid #d81f1f
+                    transition: all .4s
+

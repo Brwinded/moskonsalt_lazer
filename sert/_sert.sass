@@ -1,0 +1,74 @@
+@import flickity
+
+.s__sert
+    height: 600px
+    background: #fff
+    margin-top: 50px
+    +outer-container()
+    +media(max-width 768px, 12)
+        +outer-container()
+
+    &_top
+        +span-columns(16)
+
+        &-line
+            width: 0px
+            height: 2px
+            background: #d81f1f
+            display: block
+            transition: width 1.5s ease-in-out
+            +media(max-width 768px, 12)
+                display: none
+
+    &:hover .s__sert_top-line
+        +span-columns(16)
+        +media(max-width 768px, 12)
+            display: none
+
+    &_main-text
+        +span-columns(10)
+        +shift(3)
+        +media(max-width 768px, 12)
+            +span-columns(12)
+            +shift(0)
+            +pad(10px 0 0 0)
+        +media(max-width 320px, 10)
+            +span-columns(10)
+            +shift(0)
+            +pad(10px 0 0 0)
+            margin-right: 0
+        h5
+            margin: 10px auto
+            font-size: 40px
+            text-align: center
+            font-weight: 300
+            color: #605e5e
+            +media(max-width 768px, 12)
+                font-size: 35px
+            +media(max-width 320px, 10)
+                font-size: 30px
+
+    &_p
+        +span-columns(3)
+        height: 50px
+        display: block
+        padding-left: 20px
+        background: #d81f1f
+        +media(max-width 768px, 12)
+            +span-columns(3)
+        +media(max-width 320px, 10)
+            +span-columns(5)
+
+
+    &-slider
+        +span-columns(10)
+        +shift(3)
+        padding: 30px 0 0 0
+        +media(max-width 768px, 12)
+            +span-columns(10)
+            +shift(1)
+        +media(max-width 320px, 10)
+            padding: 20px 0 0 0
+
+        & img
+            margin: 0 20px 0 20px

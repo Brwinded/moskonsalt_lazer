@@ -1,0 +1,91 @@
+.s__action
+    height: 300px
+    margin-top: 50px
+    +outer-container()
+    +media(max-width 320px, 10)
+        height: 380px
+
+    &_left
+        +span-columns(5)
+        height: 300px
+        background:
+            image: url('http://lorempixel.com/400/400/')
+            repeat: no-repeat
+            position: center center
+            size: cover
+            color: #656565
+        background-blend-mode: luminosity
+        +media(max-width 768px, 12)
+            +span-columns(4.7)
+        +media(max-width 320px, 10)
+            display: none
+        
+        &_p
+            +span-columns(3 of 5)
+            height: 50px
+            padding-left: 20px
+            background: #d81f1f
+
+    &_right
+        +span-columns(8)
+        +shift(2)
+        height: 300px
+        background: #fff
+        margin-right: 0
+        +media(max-width 768px, 12)
+            +shift(1)
+        +media(max-width 320px, 10)
+            +span-columns(10)
+            +shift(0)
+            height: 380px
+
+        &_p
+            +span-columns(3 of 5)
+            height: 50px
+            padding-left: 20px
+            background: #d81f1f
+            +media(min-width 321px, 10)
+                display: none
+
+        &-line
+            width: 0px
+            height: 2px
+            background: #d81f1f
+            display: block
+            position: absolute
+            transition: width 1.5s ease-in-out
+            +media(max-width 768px, 12)
+                display: none
+
+        &:hover .s__action_right-line
+            +span-columns(8)
+            +media(max-width 768px, 12)
+                display: none
+        
+        &_txt
+            width: 90%
+            margin: 0 auto
+            color: #000
+            +media(max-width 320px, 10)
+                margin: 70px auto
+
+            &-btn
+                display: block
+                width: 150px
+                border: 2px solid #b9b9b9
+                border-radius: 5px
+                margin: 30px auto
+                text-align: center
+                padding: 10px
+                text-decoration: none
+                color: #d81f1f
+                font-weight: 500
+                transition: all .4s
+                
+                &:hover
+                    border: 2px solid #d81f1f
+                    transition: all .4s
+                    &::after
+                        content: '  »'
+
+

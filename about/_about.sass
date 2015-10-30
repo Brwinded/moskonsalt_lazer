@@ -1,0 +1,158 @@
+.s_about
+    height: 552px
+    +outer-container()
+    +media(max-width 768px, 12)
+        height: 632px
+    +media(max-width 320px, 10)
+        height: 1114px
+
+    &__left
+        +shift(1)
+        +span-columns(6)
+        min-height: 500px
+        background: #fff
+        +media(max-width 768px, 12)
+            +span-columns(5)
+            margin-right: 0
+        +media(max-width 320px, 10)
+            +span-columns(10)
+            +shift(0)
+            height: 532px
+
+        &-line
+            width: 0px
+            background: #d81f1f
+            display: block
+            height: 2px
+            transition: width 1.5s ease
+            +media(max-width 768px, 12)
+                display: none
+
+        &:hover .s_about__left-line
+            +span-columns(6 of 6)
+            +media(max-width 768px, 12)
+                display: none
+        
+        &_p
+            +span-columns(3)
+            height: 50px
+            position: absolute
+            display: block
+            padding-left: 20px
+            background: #d81f1f
+            +media(max-width 768px, 12)
+                +span-columns(3)
+            +media(max-width 320px, 10)
+                +span-columns(5)
+
+        &_img
+            width: 100%
+            height: 300px
+            background:
+                image: url('http://lorempixel.com/500/600/')
+                repeat: no-repeat
+                position: center center
+                size: cover
+                color: #656565
+            background-blend-mode: luminosity
+            +media(max-width 320px, 10)
+                height: 200px
+
+        &_txt
+            +pad(10px 20px 70px 20px)
+            margin: 0 auto
+            color: #000
+
+            &-btn
+                display: block
+                width: 70px
+                border: 2px solid #b9b9b9
+                border-radius: 5px
+                text-align: center
+                padding: 10px
+                text-decoration: none
+                color: #d81f1f
+                font-weight: 500
+                transition: all .4s
+                float: right
+                
+                &:hover
+                    border: 2px solid #d81f1f
+                    transition: all .4s
+
+
+    &__right
+        +span-columns(6)
+        +shift(2)
+        min-height: 500px
+        background: #fff
+        margin-bottom: 50px
+        +media(max-width 768px, 12)
+            +span-columns(5)
+            +shift(1)
+        +media(max-width 320px, 10)
+            +span-columns(10)
+            +shift(0)
+            margin-top: 50px
+            height: 532px
+
+        &-line
+            width: 0px
+            background: #d81f1f
+            display: block
+            height: 2px
+            transition: width 1.5s ease
+            +media(max-width 768px, 12)
+                display: none
+
+        &:hover .s_about__right-line
+            +span-columns(6 of 6)
+            +media(max-width 768px, 12)
+                display: none
+        
+        &_p
+            +span-columns(3)
+            height: 50px
+            position: absolute
+            display: block
+            padding-left: 20px
+            background: #d81f1f
+            +media(max-width 768px, 12)
+                +span-columns(3)
+            +media(max-width 320px, 10)
+                +span-columns(5)
+
+        &_img
+            width: 100%
+            height: 300px
+            background:
+                image: url('http://lorempixel.com/600/500/')
+                repeat: no-repeat
+                position: center center
+                size: cover
+                color: #656565
+            background-blend-mode: luminosity
+            +media(max-width 320px, 10)
+                height: 200px
+
+        &_txt
+            +pad(10px 20px 70px 20px)
+            margin: 0 auto
+            color: #000
+
+            &-btn
+                display: block
+                width: 70px
+                border: 2px solid #b9b9b9
+                border-radius: 5px
+                text-align: center
+                padding: 10px
+                text-decoration: none
+                color: #d81f1f
+                font-weight: 500
+                transition: all .4s
+                float: right
+                
+                &:hover
+                    border: 2px solid #d81f1f
+                    transition: all .4s

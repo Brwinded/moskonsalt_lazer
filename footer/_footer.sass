@@ -1,0 +1,199 @@
+.s__footer
+    +outer-container(100%)
+    min-height: 600px
+    background: #e8e8e8
+    margin-top: 50px
+    +media(max-width 320px, 10)
+        height: 900px
+
+    &_top
+        +span-columns(16)
+        &-line
+            width: 0px
+            height: 2px
+            background: #d81f1f
+            display: block
+            transition: width 1.5s ease-in-out
+            +media(max-width 768px, 12)
+                display: none
+
+
+    &:hover .s__footer_top-line
+        +span-columns(16)
+        +media(max-width 768px, 12)
+            display: none
+
+    &_p
+        +span-columns(3)
+        height: 50px
+        position: absolute
+        display: block
+        padding-left: 20px
+        background: #d81f1f
+        +media(max-width 768px, 12)
+            +span-columns(3)
+        +media(max-width 320px, 10)
+            +span-columns(5)
+
+    &_main-text
+        +span-columns(4)
+        +shift(6)
+        +media(max-width 768px, 12)
+            +span-columns(12)
+            +shift(0)
+            +pad(50px 0 0 0)
+        +media(max-width 320px, 10)
+            +span-columns(10)
+            +shift(0)
+            +pad(50px 0 0 0)
+            margin-right: 0
+        h6
+            margin: 10px auto
+            font-size: 40px
+            text-align: center
+            font-weight: 300
+            color: #605e5e
+            +media(max-width 768px, 12)
+                font-size: 35px
+            +media(max-width 320px, 10)
+                font-size: 30px
+
+
+
+    &_txt
+        +shift(2)
+        +span-columns(12)
+        +pad(10px)
+        color: black
+        +media(max-width 768px, 12)
+            +span-columns(10)
+            +shift(1)
+        +media(max-width 320px, 10)
+            +span-columns(8)
+            +shift(1)
+
+        &-form
+            +span-columns(6)
+            +shift(1)
+            display: inline-block
+            +media(max-width 768px, 12)
+                +span-columns(5)
+            +media(max-width 320px, 10)
+                +span-columns(10)
+                margin: 0
+
+            .form-group
+                +span-columns(12)
+                margin: 0 0 1px 0
+                color: #000
+                +media(max-width 768px, 12)
+                    +span-columns(12)
+                +media(max-width 320px, 10)
+                    +span-columns(10)
+
+                input:not(.submit),
+                textarea
+                    width: 100%
+                    +pad(15px)
+                    border: none
+
+            .contact-sumbit
+                margin-top: 10px
+
+                .submit
+                    background: #d81f1f
+                    color: #fff
+                    text-align: center
+                    +pad(15px)
+                    cursor: pointer
+                    border: none
+
+
+        &-adr
+            +span-columns(5)
+            +pad(50px 0 0 0)
+            line-height: 1.5
+            color: #d81f1f
+            font-weight: 300
+            +media(max-width 768px, 12)
+                +shift(0)
+                +span-columns(5.5)
+            +media(max-width 320px, 10)
+                +span-columns(10)
+                +shift(0)
+
+            ul
+                li
+                    list-style: none
+                    margin-top: 10px
+
+                    &:nth-child(1)
+                        &:before
+                            content: ''
+                            display: block
+                            height: 20px
+                            width: 20px
+                            position: absolute;
+                            margin-left: -25px;
+                    &:nth-child(1)
+                        &:before
+                            @extend li:nth-child(1):before
+                            background:
+                                image:url('../img/si-glyph-old-phone.svg')
+                                size: contain
+                    &:nth-child(2)
+                        &:before
+                            @extend li:nth-child(1):before
+                            background:
+                                image:url('../img/si-glyph-pin-location.svg')
+                                size: contain
+                    &:nth-child(3)
+                        &:before
+                            @extend li:nth-child(1):before
+                            background:
+                                image:url('../img/si-glyph-mail.svg')
+                                size: contain
+
+        &-social
+            +span-columns(4 of 12)
+            +shift(4)
+            height: 70px
+            +media(max-width 768px, 12)
+                +span-columns(6)
+                +shift(4)
+            +media(max-width 320px, 10)
+                +span-columns(10)
+                +shift(0)
+            li
+                list-style: none
+                display: inline-block
+                margin-left: 30px
+
+                a
+                    text-decoration: none
+                    span
+                        display: inline-block
+                        display: block
+                        margin: 0
+                        width: 70px
+                        height: 70px
+                    .twitter_icon
+                        background:
+                            image: url('../img/social-twitter.svg')
+                            position: center center
+                            size: 40px
+                            repeat: no-repeat
+                    .gplus_icon
+                        background:
+                            image: url('../img/social-google-plus.svg')
+                            position: center center
+                            size: 40px
+                            repeat: no-repeat
+
+.alert-success
+    font-size: 18px
+    background: #FAFAFA
+    padding: 10px
+    text-align: center
+    border-radius: 5px
+    color: #008000

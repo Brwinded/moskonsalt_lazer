@@ -1,0 +1,39 @@
+.s__footer
+    .s__footer_top
+        .s__footer_top-line
+    .s__footer_p
+        p Contact Us
+    .s__footer_main-text
+        h2 Hello all
+    .s__footer_txt
+        form.s__footer_txt-form(id="contact-form" class="contact-form" action="process.php", role="form", method="post")
+            p.contact-name
+                input(id="contact_name" type="text" placeholder="Full Name" value="" name="name")
+            p.contact-email
+                input(id="contact_email" type="text" placeholder="Email Address" value="" name="email")
+            p.antispam Leave this empty:
+                input(name="url")
+            p.contact-message
+                textarea(name="message" placeholder="Your message" rows="5" cols="50")
+            p.contact-sumbit
+                input(class="submit" type="submit" value=" Send Message")
+        .s__footer_txt-adr
+            ul
+                li Phone: 8 800 00 00
+                li Address: Moscow
+                li Email: example@example.com
+        .s__footer_txt-social
+
+    form#contact-form.form-horizontal(action="process.php", role="form", method="post")
+        #name-field.form-group
+            .col-lg-10
+                input#form-name.form-control(type="text", name="form-name", placeholder="Name", required="")
+        #email-field.form-group
+            .col-lg-10
+                input#form-email.form-control(type="email", name="form-email", placeholder="Email", required="")
+        #message-field.form-group
+            .col-lg-10
+                textarea#form-message.form-control(rows="6", name="form-message", placeholder="Message", required="")
+        .form-group
+            .col-lg-offset-2.col-lg-10
+                button.btn.btn-default(type="submit") Send
